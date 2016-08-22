@@ -1,0 +1,35 @@
+{% load static woyd_tags %}
+
+<section class="site-topbar">
+<nav class="site-topbar__sociallinks">
+    {% include 'partials/sociallinks.html' %}
+</nav>
+</section>
+
+<header class="site-header">
+<div class="container">
+<div class="grid">
+    <div class="s-12 m-4 l-4 last-s navigation-toggle-container">
+        <a href="/" class="site-logo">
+            <img src="{% static 'img/logo.png' %}" class="site-logo__image">
+        </a>
+        <a href="#" id="js-navigation-toggle" class="navigation-toggle visible-s hidden-m hidden-l">
+            <i class="mdi mdi-menu"></i>
+        </a>
+    </div>
+    <div class="s-12 m-8 l-8 last">
+        <nav role="navigation" class="site-navigation" id="js-site-navigation">
+
+            {% load_navigation_menu 'main' as main_menu %}
+            {% for menu_item in main_menu.menu_items.all %}
+                <a href="{{ menu_item.url }}"
+                    {% if menu_item.url == page.url %}class="current"{% endif %}>
+                    {{ menu_item }}
+                </a>
+            {% endfor %}
+
+        </nav>
+    </div>
+</div>
+</header>
+

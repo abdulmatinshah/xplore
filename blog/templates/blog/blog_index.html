@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags woyd_tags wagtailimages_tags staticfiles %}
+
+{% block body_class %}template-blogindexpage{% endblock %}
+
+{% block content %}
+
+{% include "partials/page_title.html" %}
+
+    <section class="blog-intro">
+        <div class="container">
+        <div class="grid">
+        <div class="s-12 last">
+            {{ page.intro|richtext }}
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="container">
+    <div class="grid">
+    {% for p in self.posts %}
+        <div class="s-12 m-4 l-4 last-s {% if forloop.last %}last-m last-l{% endif %}">
+            <article class="index-post">
+                <a href="{{ p.url }}">
+                    <figure class="index-post__figure">
+                        {% image p.main_image width-1200 %}
+                    </figure>
+                    <h2 class="index-post__title">{{ p.title }}</h2>
+                    <p class="index-post__date">{{ p.date }}</p>
+                    <p class="index-post__intro">{{ p.intro }}</p>
+                </a>
+            </article>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

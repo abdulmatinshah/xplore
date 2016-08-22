@@ -1,0 +1,14 @@
+
+*.pyc
+.*.swp
+env/
+log/
+run/
+node_modules/
+.sass-cache/
+dist/
+/tmp/
+/media/
+whoosh_index/
+src/
+woyd/settings/dev.py

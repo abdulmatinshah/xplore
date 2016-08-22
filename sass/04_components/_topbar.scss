@@ -1,0 +1,22 @@
+
+.site-topbar {
+    @include font-size(14);
+    color: $black;
+    background: $grey-l-5;
+}
+
+.site-topbar__sociallinks {
+    @include font-size(18);
+    text-align: center;
+
+    a {
+        color: $grey-n;
+        display: inline-block;
+        padding: $gutter / 2;
+
+        &:hover {
+            background: $borraccino;
+            color: $white;
+        }
+    }
+}

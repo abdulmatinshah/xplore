@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////
+// Typography
+////////////////////////////////////////////////////////////////////////////////
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $main-font;
+    line-height: $line-height-headings;
+    margin-bottom: $gutter / 2;
+}
+
+h1 {
+    @include font-size(32);
+}
+
+h2 {
+    @include font-size(24);
+}
+
+h3 {
+    @include font-size(20);
+}
+
+h4 {
+    @include font-size(14);
+}
+
+h5 {
+    @include font-size(12);
+}
+
+h6 {
+    @include font-size(12);
+}

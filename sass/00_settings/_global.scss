@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Colors variables
+////////////////////////////////////////////////////////////////////////////////
+
+$black:         #000;
+$white:         #fff;
+
+$grey-d-3: #232221;
+$grey-d-2: #535251;
+$grey-d-1: #636261;
+$grey-n:   #939291;
+$grey-l-1: #a3a2a1;
+$grey-l-2: #c3c2c1;
+$grey-l-3: #e3e2e1;
+$grey-l-4: #f4f4f4;
+$grey-l-5: #fafafa;
+
+$semolino: #fff9c1;
+$semolino-l-1: tint($semolino, 20);
+
+$borraccino: #346357;
+$borraccino-d-1: shade($borraccino, 15);
+$borraccino-l-1: tint($borraccino, 20);
+$borraccino-l-2: tint($borraccino, 30);
+
+$mentadent: #9ef5cf;
+$mentadent-d-1: shade($mentadent, 5);
+
+$lime: #31aa75;
+$lime-d-1: shade($lime, 15);
+$lime-d-2: shade($lime, 25);
+
+$blue: #22adf2;
+$blue-d-1: shade($blue, 15);
+$blue-d-2: shade($blue, 25);
+
+$red: #e7594c;
+$red-l-1: tint($red, 15);
+$red-d-1: shade($red, 15);
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Fonts
+////////////////////////////////////////////////////////////////////////////////
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic);
+$main-font: "Playfair Display", serif;
+$base-line: 16;
+$scale-factor: 1.4;
+$line-height: 1.4;
+$line-height-headings: 1.1;
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Shadows
+////////////////////////////////////////////////////////////////////////////////
+
+$box-shadow-small: 0 1px 1px rgba($black, .1);
+$box-shadow-medium: 0 1px 2px rgba($black, .3);

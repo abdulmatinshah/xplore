@@ -1,0 +1,62 @@
+
+.site-navigation {
+    display: none;
+    margin-bottom: $gutter * 2;
+
+    a {
+        @include font-size(20);
+        @include menu-h(initial);
+        display: block;
+        padding-top: $gutter / 2;
+        padding-bottom: $gutter / 2;
+        background: $grey-l-4;
+        margin-bottom: $gutter / 4;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.current {
+            @include box-shadow(inset 4px 0 0 $red);
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+
+.peppermint.peppermint-active .peppermint-dots > li {
+    @include border-radius(10px);
+    height: 20px;
+    width: 20px;
+}
+
+.site-content {
+    padding-top: $gutter * 4;
+    padding-bottom: $gutter * 4;
+}
+
+.latest-post {
+    margin-bottom: $gutter * 4;
+}
+
+.rich-text {
+    .richtext-image.left {
+        width: 100%;
+        margin-right: 0;
+        display: block;
+        float: none;
+        margin-bottom: $gutter;
+    }
+}
+
+.homepage-service {
+    padding: $gutter 0;
+}
+
+.homepage-service__nav__link__span {
+    width: 80%;
+    text-align: center;
+}

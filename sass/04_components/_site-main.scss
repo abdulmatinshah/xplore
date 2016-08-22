@@ -1,0 +1,235 @@
+.site-content {
+    padding-top: $gutter * 6;
+    padding-bottom: $gutter * 6;
+}
+
+.blog-intro {
+    background: $grey-l-5;
+    margin-bottom: $gutter * 4;
+    padding-top: $gutter * 4;
+    padding-bottom: $gutter * 4;
+}
+
+.blog-post-meta {
+    text-align: center;
+    background: $grey-l-5;
+    margin-bottom: 0;
+    padding-top: $gutter * 2;
+    padding-bottom: $gutter * 2;
+}
+
+.blog-post-content {
+    margin-top: $gutter * 2;
+}
+
+.index-post {
+    margin-bottom: $gutter * 2;
+
+    a {
+        @include transition(all .3s);
+        @include box-shadow(0 0 0 0 transparent);
+        display: block;
+        color: $black;
+        background: $grey-l-5;
+
+        &:hover {
+            @include box-shadow(0 0 0 4px $red);
+        }
+    }
+}
+
+.index-post__title {
+    @include font-size(22);
+    margin-bottom: 0;
+    padding: $gutter;
+}
+
+.index-post__date {
+    @include font-size(12);
+    text-transform: uppercase;
+    color: $grey-d-2;
+    padding: 0 $gutter;
+    text-align: right;
+}
+
+.index-post__intro {
+    @include font-size(14);
+    padding: $gutter;
+}
+
+.homepage-latest-posts {
+    padding-bottom: $gutter * 6;
+}
+
+.latest-post {
+    a {
+        color: $black;
+
+        &:hover {
+            img {
+                @include transform(scale(2));
+            }
+        }
+    }
+}
+
+.latest-post__title {
+    @include font-size(22);
+    margin-bottom: 0;
+}
+
+.latest-post__figure {
+    margin-bottom: $gutter / 2;
+    overflow: hidden;
+
+    img {
+        @include transition(all 20s ease-out);
+        @include transform(scale(1));
+    }
+}
+
+.latest-post__date {
+    @include font-size(12);
+    text-transform: uppercase;
+    color: $grey-n;
+}
+
+.latest-post__intro {
+    @include font-size(14);
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+}
+
+.homepage-services {
+    margin-bottom: $gutter * 4;
+}
+
+.homepage-service {
+    @include transition(all .2s ease);
+    position: relative;
+    overflow: hidden;
+    padding: $gutter * 2;
+    border-bottom: 1px solid $grey-l-4;
+
+    &:hover {
+        padding-left: $gutter * 3;
+
+        .homepage-service__nav__link {
+            @include opacity(1);
+            visibility: visible;
+        }
+
+        .homepage-service__nav__link__span {
+            @include transform(translate(-50%, -50%));
+        }
+    }
+}
+
+.homepage-services__image {
+    position: relative;
+}
+
+%absolute-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-service__nav__link {
+    @extend %absolute-cover;
+    @include font-size(18);
+    @include opacity(0);
+    background: rgba($borraccino, .9);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $white;
+    overflow: hidden;
+    visibility: hidden;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.homepage-service__nav__link__span {
+    @include transition(all .5s ease);
+    @include transform(translate(-50%, -200%));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-bottom: 1px solid $white;
+    border-top: 1px solid $white;
+    padding: $gutter / 2 $gutter;
+}
+
+.homepage-service__title {
+    @include font-size(26);
+    margin-bottom: $gutter;
+}
+
+.homepage-service__intro {
+    color: $grey-n;
+}
+
+.homepage-services__image__img {
+    @include transition(all .3s ease);
+    @include transform(translateY(-10%));
+    @include opacity(0);
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.active {
+        @include transform(translateY(0));
+        @include opacity(1);
+        visibility: visible;
+    }
+}
+
+.rich-text {
+    p {
+        line-height: 1.8;
+        letter-spacing: .5px;
+        margin-bottom: $gutter;
+    }
+
+    .richtext-image.left {
+        width: 50%;
+        margin-right: $gutter;
+    }
+
+    a {
+        @include box-shadow(inset 0 -2px 0 $red);
+        padding-bottom: 2px;
+        color: $black;
+
+        &:hover {
+            @include box-shadow(inset 0 -8px 0 rgba($red, .4));
+            color: $black;
+        }
+    }
+
+    hr {
+        width: 300px;
+        margin: $gutter * 4 auto $gutter * 4 + 4px auto;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0;
+            background: transparent;
+            border-bottom: 1px dashed $grey-l-3;
+            bottom: -4px;
+            left: 0;
+        }
+    }
+
+    h2, h3, h4 {
+        margin-bottom: $gutter * 2;
+    }
+}

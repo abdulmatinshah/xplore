@@ -1,0 +1,38 @@
+{% load wagtailcore_tags woyd_tags wagtailimages_tags staticfiles %}
+
+<div class="container">
+<div class="grid">
+<div class="s-12 m-6 l-6 last-s">
+{% for s in services %}
+
+    <article class="homepage-service js-homepage-service" data-target="{{ s.pk }}">
+        <header>
+            <h1 class="homepage-service__title">{{ s.title }}</h1>
+        </header>
+        <div class="homepage-service__intro">
+            {{ s.body|richtext }}
+        </div>
+        <nav class="homepage-service__nav">
+            <a href="{{ s.link_page.url }}" class="homepage-service__nav__link">
+                <span class="homepage-service__nav__link__span">
+                    Find out more
+                </span>
+            </a>
+        </nav>
+    </article>
+
+{% endfor %}
+</div>
+<div class="s-12 m-6 l-6 last hidden-s">
+    <section class="homepage-services__image">
+        {% for s in services %}
+        <div class="js-homepage-service-image homepage-services__image__img {% if forloop.first %}active{% endif %}"
+            id="js-homepage-service-image--{{ s.pk }}">
+            {% image s.picture width-800 %}
+        </div>
+        {% endfor %}
+    </section>
+</div>
+</div>
+</div>
+

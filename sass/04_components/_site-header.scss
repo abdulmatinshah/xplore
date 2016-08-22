@@ -1,0 +1,55 @@
+
+@mixin menu-h($h) {
+    display: inline-block;
+    height: $h;
+    line-height: $h;
+}
+
+.site-logo {
+    @include menu-h(90px);
+}
+
+.site-logo__image {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.site-navigation {
+    @include font-size(22);
+    text-align: right;
+
+    a {
+        @include menu-h(90px);
+        color: $black;
+        padding-left: $gutter;
+        padding-right: $gutter;
+
+        &:hover {
+            background: $borraccino;
+            color: $white;
+        }
+
+        &.current {
+            @include box-shadow(inset 0 4px 0 $red);
+        }
+    }
+}
+
+.navigation-toggle-container {
+    position: relative;
+}
+
+.navigation-toggle {
+    @include font-size(24);
+    @include menu-h(90px);
+    position: absolute;
+    top: 0;
+    right: $gutter;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    &.active i:before {
+        content: mdi('close');
+    }
+}

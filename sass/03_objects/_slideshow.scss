@@ -1,0 +1,45 @@
+.peppermint-container {
+    position: relative;
+}
+
+.peppermint-arrow {
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+}
+
+.peppermint-arrow--prev {
+    left: $gutter;
+}
+
+.peppermint-arrow--next {
+    right: $gutter;
+}
+
+.peppermint.peppermint-active .peppermint-dots {
+    @include transform(translateX(-50%));
+    position: absolute;
+    bottom: $gutter;
+    left: 50%;
+    padding: 0;
+    line-height: 0;
+
+    > li {
+        cursor: pointer;
+        outline: 0;
+        height: 10px;
+        width: 40px;
+        background: rgba($white, .4);
+        display: inline-block;
+        margin: 0 4px;
+
+        &:hover {
+            background: rgba($white, .6);
+        }
+
+        &.peppermint-active-dot {
+            background: $white;
+        }
+    }
+}

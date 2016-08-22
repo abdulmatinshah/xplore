@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags woyd_tags wagtailimages_tags static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<section class="homepage-slideshow">
+<div class="container">
+<div class="grid">
+<div class="s-12 last peppermint-container">
+    <a href="#" id="js-peppermint-prev" class="peppermint-arrow peppermint-arrow--prev">
+        <img src="{% static 'img/arrow-left.png' %}">
+    </a>
+    <a href="#" id="js-peppermint-next" class="peppermint-arrow peppermint-arrow--next">
+        <img src="{% static 'img/arrow-right.png' %}">
+    </a>
+    <div class="peppermint peppermint-inactive" id="peppermint">
+    {% for slide in self.slideshow_images.all %}
+        <figure>
+            {% image slide.picture fill-1200x600 %}
+        </figure>
+    {% endfor %}
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+{% include "partials/site_content.html" %}
+
+<section class="homepage-services">
+
+    <header>
+        <h2 class="homepage-services__title big-section-title">Services</h2>
+    </header>
+
+    {% services %}
+</section>
+
+<section class="homepage-latest-posts">
+
+    <header>
+        <h2 class="homepage-latest-posts__title big-section-title">Latest blog articles</h2>
+    </header>
+
+    <div class="container">
+    <div class="grid">
+    {% for p in self.posts %}
+        <div class="s-12 m-4 l-4 last-s {% if forloop.last %}last-m last-l{% endif %}">
+            <article class="latest-post">
+                <a href="{{ p.url }}">
+                    <figure class="latest-post__figure">
+                        {% image p.main_image width-600 %}
+                    </figure>
+                    <h2 class="latest-post__title">{{ p.title }}</h2>
+                    <p class="latest-post__date">{{ p.date }}</p>
+                    <p class="latest-post__intro">{{ p.intro }}</p>
+                </a>
+            </article>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/peppermint.required.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/peppermint.min.js' %}"></script>
+<script>
+
+    var slider_el = document.getElementById('peppermint');
+    var slider = Peppermint(slider_el, {
+        speed: 300,
+        touchSpeed: 300,
+        slideshow: true,
+        slideshowInterval: 4000,
+        stopSlideshowAfterInteraction: false,
+        startSlide: 0,
+        mouseDrag: true,
+        disableIfOneSlide: true,
+        cssPrefix: 'peppermint-',
+        dots: true,
+        dotsPrepend: false,
+        dotsContainer: undefined,
+        slidesContainer: undefined,
+        onSlideChange: undefined,
+        onSetup: undefined
+    });
+
+    var services = document.getElementsByClassName('js-homepage-service');
+    var services_images = document.getElementsByClassName('js-homepage-service-image');
+
+    function activate_service_image(el) {
+        console.log(services_images);
+        for (var i=0; i<services_images.length; i++)
+            remove_class(services_images[i], 'active');
+
+        add_class(el, 'active');
+    }
+
+    for (var i=0; i<services.length; i++)
+        services[i].addEventListener('mouseenter', function(e) {
+            var src = e.target || e.srcElement;
+            var pk = src.getAttribute('data-target');
+            var target_image = document.getElementById('js-homepage-service-image--' + pk);
+            activate_service_image(target_image);
+        });
+
+
+    var prev_btn = document.getElementById('js-peppermint-prev');
+    var next_btn = document.getElementById('js-peppermint-next');
+
+    prev_btn.addEventListener('click', function(e){
+        e.preventDefault();
+        slider.prev();
+    });
+
+    next_btn.addEventListener('click', function(e){
+        e.preventDefault();
+        slider.next();
+    });
+
+</script>
+{% endblock %}

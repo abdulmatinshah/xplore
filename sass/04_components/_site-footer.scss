@@ -1,0 +1,35 @@
+%footer-spacing {
+    background: $white;
+    color: $grey-d-1;
+    text-align: center;
+    padding-top: $gutter * 2;
+}
+
+.site-bottom {
+    @extend %footer-spacing;
+    margin-top: $gutter * 2;
+}
+
+.site-footer {
+    @extend %footer-spacing;
+    padding-bottom: $gutter * 4;
+}
+
+.site-bottom__sociallinks {
+    a {
+        @include border-radius(50px);
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        background: $grey-l-4;
+        color: $red;
+        display: inline-block;
+        text-align: center;
+        margin: 0 $gutter / 3;
+
+        &:hover {
+            background: $borraccino;
+            color: $white;
+        }
+    }
+}
