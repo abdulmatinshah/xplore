@@ -7950,6 +7950,9 @@ select:focus {
   top: 0;
   left: 0;
 }
+.homepage-services__image__img.justone {
+  position: relative;
+}
 .homepage-services__image__img.active {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);

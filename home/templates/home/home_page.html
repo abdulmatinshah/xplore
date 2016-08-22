@@ -6,38 +6,39 @@
 
 {% block content %}
 
-<section class="homepage-slideshow">
-<div class="container">
-<div class="grid">
-<div class="s-12 last peppermint-container">
-    <a href="#" id="js-peppermint-prev" class="peppermint-arrow peppermint-arrow--prev">
-        <img src="{% static 'img/arrow-left.png' %}">
-    </a>
-    <a href="#" id="js-peppermint-next" class="peppermint-arrow peppermint-arrow--next">
-        <img src="{% static 'img/arrow-right.png' %}">
-    </a>
-    <div class="peppermint peppermint-inactive" id="peppermint">
-    {% for slide in self.slideshow_images.all %}
-        <figure>
-            {% image slide.picture fill-1200x600 %}
-        </figure>
-    {% endfor %}
+{% if self.slideshow_images.all %}
+
+    <section class="homepage-slideshow">
+    <div class="container">
+    <div class="grid">
+    <div class="s-12 last peppermint-container">
+        {% if self.slideshow_images.all|length > 1 %}
+        <a href="#" id="js-peppermint-prev" class="peppermint-arrow peppermint-arrow--prev">
+            <img src="{% static 'img/arrow-left.png' %}">
+        </a>
+        <a href="#" id="js-peppermint-next" class="peppermint-arrow peppermint-arrow--next">
+            <img src="{% static 'img/arrow-right.png' %}">
+        </a>
+        {% endif %}
+        <div class="peppermint peppermint-inactive" id="peppermint">
+        {% for slide in self.slideshow_images.all %}
+            <figure>
+                {% image slide.picture fill-1200x600 %}
+            </figure>
+        {% endfor %}
+        </div>
     </div>
-</div>
-</div>
-</div>
-</section>
+    </div>
+    </div>
+    </section>
+
+{% endif %}
 
 {% include "partials/site_content.html" %}
 
-<section class="homepage-services">
+{% services %}
 
-    <header>
-        <h2 class="homepage-services__title big-section-title">Services</h2>
-    </header>
-
-    {% services %}
-</section>
+{% if self.posts %}
 
 <section class="homepage-latest-posts">
 
@@ -65,67 +66,58 @@
     </div>
 </section>
 
+{% endif %}
+
 {% endblock %}
+
+
+
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/peppermint.required.css' %}">
+    {% if self.slideshow_images.all %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/peppermint.required.css' %}">
+    {% endif %}
 {% endblock %}
 
+
 {% block extra_js %}
-<script src="{% static 'js/peppermint.min.js' %}"></script>
-<script>
+    {% if self.slideshow_images.all %}
+        <script src="{% static 'js/peppermint.min.js' %}"></script>
+        <script>
 
-    var slider_el = document.getElementById('peppermint');
-    var slider = Peppermint(slider_el, {
-        speed: 300,
-        touchSpeed: 300,
-        slideshow: true,
-        slideshowInterval: 4000,
-        stopSlideshowAfterInteraction: false,
-        startSlide: 0,
-        mouseDrag: true,
-        disableIfOneSlide: true,
-        cssPrefix: 'peppermint-',
-        dots: true,
-        dotsPrepend: false,
-        dotsContainer: undefined,
-        slidesContainer: undefined,
-        onSlideChange: undefined,
-        onSetup: undefined
-    });
+var slider_el = document.getElementById('peppermint');
+var slider = Peppermint(slider_el, {
+    speed: 300,
+    touchSpeed: 300,
+    slideshow: true,
+    slideshowInterval: 4000,
+    stopSlideshowAfterInteraction: false,
+    startSlide: 0,
+    mouseDrag: true,
+    disableIfOneSlide: true,
+    cssPrefix: 'peppermint-',
+    dots: true,
+    dotsPrepend: false,
+    dotsContainer: undefined,
+    slidesContainer: undefined,
+    onSlideChange: undefined,
+    onSetup: undefined
+});
 
-    var services = document.getElementsByClassName('js-homepage-service');
-    var services_images = document.getElementsByClassName('js-homepage-service-image');
+var prev_btn = document.getElementById('js-peppermint-prev');
+var next_btn = document.getElementById('js-peppermint-next');
 
-    function activate_service_image(el) {
-        console.log(services_images);
-        for (var i=0; i<services_images.length; i++)
-            remove_class(services_images[i], 'active');
+prev_btn.addEventListener('click', function(e){
+    e.preventDefault();
+    slider.prev();
+});
 
-        add_class(el, 'active');
-    }
+next_btn.addEventListener('click', function(e){
+    e.preventDefault();
+    slider.next();
+});
 
-    for (var i=0; i<services.length; i++)
-        services[i].addEventListener('mouseenter', function(e) {
-            var src = e.target || e.srcElement;
-            var pk = src.getAttribute('data-target');
-            var target_image = document.getElementById('js-homepage-service-image--' + pk);
-            activate_service_image(target_image);
-        });
+        </script>
 
-
-    var prev_btn = document.getElementById('js-peppermint-prev');
-    var next_btn = document.getElementById('js-peppermint-next');
-
-    prev_btn.addEventListener('click', function(e){
-        e.preventDefault();
-        slider.prev();
-    });
-
-    next_btn.addEventListener('click', function(e){
-        e.preventDefault();
-        slider.next();
-    });
-
-</script>
+    {% endif %}
 {% endblock %}

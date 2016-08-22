@@ -1,38 +1,74 @@
 {% load wagtailcore_tags woyd_tags wagtailimages_tags staticfiles %}
 
-<div class="container">
-<div class="grid">
-<div class="s-12 m-6 l-6 last-s">
-{% for s in services %}
+{% if services %}
 
-    <article class="homepage-service js-homepage-service" data-target="{{ s.pk }}">
-        <header>
-            <h1 class="homepage-service__title">{{ s.title }}</h1>
-        </header>
-        <div class="homepage-service__intro">
-            {{ s.body|richtext }}
-        </div>
-        <nav class="homepage-service__nav">
-            <a href="{{ s.link_page.url }}" class="homepage-service__nav__link">
-                <span class="homepage-service__nav__link__span">
-                    Find out more
-                </span>
-            </a>
-        </nav>
-    </article>
+<section class="homepage-services">
 
-{% endfor %}
-</div>
-<div class="s-12 m-6 l-6 last hidden-s">
-    <section class="homepage-services__image">
-        {% for s in services %}
-        <div class="js-homepage-service-image homepage-services__image__img {% if forloop.first %}active{% endif %}"
-            id="js-homepage-service-image--{{ s.pk }}">
-            {% image s.picture width-800 %}
-        </div>
-        {% endfor %}
-    </section>
-</div>
-</div>
-</div>
+    <header>
+        <h2 class="homepage-services__title big-section-title">Services</h2>
+    </header>
+
+    <div class="container">
+    <div class="grid">
+    <div class="s-12 m-6 l-6 last-s">
+    {% for s in services %}
+
+        <article class="homepage-service js-homepage-service" data-target="{{ s.pk }}">
+            <header>
+                <h1 class="homepage-service__title">{{ s.title }}</h1>
+            </header>
+            <div class="homepage-service__intro">
+                {{ s.body|richtext }}
+            </div>
+            <nav class="homepage-service__nav">
+                <a href="{{ s.link_page.url }}" class="homepage-service__nav__link">
+                    <span class="homepage-service__nav__link__span">
+                        Find out more
+                    </span>
+                </a>
+            </nav>
+        </article>
+
+    {% endfor %}
+    </div>
+    <div class="s-12 m-6 l-6 last hidden-s">
+        <section class="homepage-services__image">
+            {% for s in services %}
+            <div class="js-homepage-service-image homepage-services__image__img {% if forloop.first %}active{% endif %} {% if services|length == 1 %}justone{% endif %}"
+                id="js-homepage-service-image--{{ s.pk }}">
+                {% image s.picture width-800 %}
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+{% endif %}
+
+
+{% block extra_js %}
+{% if services %}
+<script>
+    var services = document.getElementsByClassName('js-homepage-service');
+    var services_images = document.getElementsByClassName('js-homepage-service-image');
+
+    function activate_service_image(el) {
+        for (var i=0; i<services_images.length; i++)
+            remove_class(services_images[i], 'active');
+        add_class(el, 'active');
+    }
+
+    for (var i=0; i<services.length; i++)
+        services[i].addEventListener('mouseenter', function(e) {
+            var src = e.target || e.srcElement;
+            var pk = src.getAttribute('data-target');
+            var target_image = document.getElementById('js-homepage-service-image--' + pk);
+            activate_service_image(target_image);
+        });
+</script>
+{% endif %}
+{% endblock %}
 

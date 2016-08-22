@@ -182,6 +182,10 @@
     top: 0;
     left: 0;
 
+    &.justone {
+        position: relative;
+    }
+
     &.active {
         @include transform(translateY(0));
         @include opacity(1);
