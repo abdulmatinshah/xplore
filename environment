@@ -1,2 +1,0 @@
-workon env_woyd
-export DJANGO_SETTINGS_MODULE=woyd.settings.dev
