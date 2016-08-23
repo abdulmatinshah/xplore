@@ -28,52 +28,52 @@ I deploy the project using [Fabric](http://www.fabfile.org/), on a [Debian](http
 
 1. Clone and enter the project
 
-```
-$ git clone git@git.carlorat.me:private/woyd.git
-$ cd woyd
-```
+  ```
+  $ git clone git@git.carlorat.me:private/woyd.git
+  $ cd woyd
+  ```
 
 2. Create a virtualenv (here I am using virtualenvwrapper)
 
-```
-mkvirtualenv env_woyd
-```
+  ```
+  mkvirtualenv env_woyd
+  ```
 
 3. Install project requirements
 
-```
-$ pip install -r requirements.txt
-$ npm install
-```
+  ```
+  $ pip install -r requirements.txt
+  $ npm install
+  ```
 
 4. Copy and edit example settings file
 
-```
-$ cp woyd/settings/dev-example.py woyd/settings/dev.py
-$ $EDITOR woyd/settings/dev.py
-```
+  ```
+  $ cp woyd/settings/dev-example.py woyd/settings/dev.py
+  $ $EDITOR woyd/settings/dev.py
+  ```
 
-Set the database here to suit your needs. Are you using [PostgreSQL](http://www.postgresql.org), right :) ?
+  Set the database here to suit your needs. Are you using [PostgreSQL](http://www.postgresql.org), right :) ?
 
 5. Run the migrations
 
-```
-python manage.py migrate
-```
+  ```
+  python manage.py migrate
+  ```
 
 6. Create a superuser
 
-```
-python manage.py createsuperuser
-```
+  ```
+  python manage.py createsuperuser
+  ```
 
 7. Run the project
 
-```
-python manage.py runserver
-```
+  ```
+  python manage.py runserver
+  ```
 
-8. Login to admin, visit ``http://127.0.0.1/admin`` and start adding contents
+8. Login to admin, visit http://127.0.0.1/admin and start adding contents
 
 
 ## TODO
