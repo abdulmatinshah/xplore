@@ -14,3 +14,4 @@ whoosh_index/
 src/
 woyd/settings/dev.py
 fabfile.py
+static/
