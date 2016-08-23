@@ -2,12 +2,12 @@
 
 PROJECT_NAME=woyd
 
-function die {
+die() {
     echo -e $1
     exit 1
 }
 
-function testcase {
+testcase() {
     declare -i FAIL
     FAIL=0
     ${@:2} || FAIL=1
@@ -15,8 +15,13 @@ function testcase {
     echo -e "\n===[ $1 PASSED ]===\n"
 }
 
-testcase 'FLAKE 8'      flake8 --config=setup.cfg
-testcase 'LINTING SCSS' gulp scsslint
-#testcase 'DJANGO TESTS' python manage.py test
+main() {
 
-exit 0
+    testcase 'FLAKE 8'      flake8 --config=setup.cfg
+    testcase 'LINTING SCSS' gulp --exitonerror 1 scsslint
+    #testcase 'DJANGO TESTS' python manage.py test
+
+    exit 0
+}
+
+main

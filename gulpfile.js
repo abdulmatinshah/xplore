@@ -20,6 +20,7 @@ var paths = {
     'images': './gfx/',
 };
 
+
 var patterns = {
     'sass': [
         paths.sass + '*.scss',
@@ -72,13 +73,20 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('scsslint', function() {
-    gulp.src(patterns.sass)
-        .pipe(scsslint({
-            'config': 'scss-lint.yml',
-        }))
-        .on('error', function(error) {
-            gutil.log(error);
-        });
+    if(gutil.env.exitonerror === 1)
+        gulp.src(patterns.sass)
+            .pipe(scsslint({
+                'config': 'scss-lint.yml',
+            }))
+            .pipe(scsslint.failReporter());
+    else
+        gulp.src(patterns.sass)
+            .pipe(scsslint({
+                'config': 'scss-lint.yml',
+            }))
+            .on('error', function(error) {
+                gutil.log(error);
+            });
 });
 
 gulp.task('jslint', function() {

@@ -6,32 +6,28 @@ from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
 
 from wagtail.contrib.settings.models import BaseSetting, register_setting
-from wagtail.wagtailcore.models import Orderable, Page
+from wagtail.wagtailcore.models import Orderable
 from wagtail.wagtailsnippets.models import register_snippet
 from wagtail.wagtaildocs.edit_handlers import DocumentChooserPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailadmin.edit_handlers import (FieldPanel,
                                                 InlinePanel,
-                                                TabbedInterface,
-                                                ObjectList,
-                                                MultiFieldPanel,
                                                 PageChooserPanel)
 from wagtail.wagtailcore.fields import RichTextField
-from django_prices.models import PriceField
 
 
 @register_setting
 class SocialMediaSettings(BaseSetting):
     facebook = models.URLField(null=True, blank=True,
-        help_text='Your Facebook page URL')
+                               help_text='Your Facebook page URL')
     pinterest = models.URLField(null=True, blank=True,
-        help_text='Your Pinterest page URL')
+                                help_text='Your Pinterest page URL')
     twitter = models.URLField(null=True, blank=True,
-        help_text='Your Twitter page URL')
+                              help_text='Your Twitter page URL')
     instagram = models.URLField(null=True, blank=True,
-        help_text='Your Instagram page URL')
+                                help_text='Your Instagram page URL')
     youtube = models.URLField(null=True, blank=True,
-        help_text='Your YouTube channel or user account URL')
+                              help_text='Your YouTube channel or user account URL')
 
 
 class LinkFields(models.Model):

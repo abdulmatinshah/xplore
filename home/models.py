@@ -3,16 +3,13 @@ from __future__ import absolute_import, unicode_literals
 from django.db import models
 
 from modelcluster.fields import ParentalKey
-from modelcluster.models import ClusterableModel
 
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailcore.models import Orderable
-from wagtail.wagtaildocs.edit_handlers import DocumentChooserPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailadmin.edit_handlers import (FieldPanel,
-                                                InlinePanel,
-                                                PageChooserPanel)
+                                                InlinePanel)
 
 from blog.models import BlogPost
 
