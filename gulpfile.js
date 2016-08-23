@@ -92,6 +92,8 @@ gulp.task('styles', function () {
     gulp.start('compass');
 });
 
+gulp.task('build', function() {});
+
 gulp.task('default', function () {
     gulp.start('jslint');
     gulp.start('scsslint');
