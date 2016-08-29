@@ -2,6 +2,8 @@
 
 This is a demonstration project for Wagtail CMS.
 
+![WOYD preview](scrot.jpg "WOYD site preview")
+
 I created a website for a Wedding Planner agency in Wagtail.
 I wrote from the first byte of backend to the last byte of frontend and oprations.
 
