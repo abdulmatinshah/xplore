@@ -8,6 +8,20 @@
 
 {% include "partials/page_title.html" %}
 
-{% include "partials/site_content.html" %}
+{{page.intro}}
+{% for block in page.body %}
+        {% if block.block_type == 'heading' %}
+            <h1>{{ block.value }}</h1>
+        {% else %}
+            <section class="block-{{ block.block_type }}">
+                {% include_block block %}
+            </section>
+        {% endif %}
+{% endfor %}
+
+
 
 {% endblock %}
+
+
+

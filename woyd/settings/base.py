@@ -138,9 +138,9 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "woyd"
+WAGTAIL_SITE_NAME = "CAP"
 
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://mycap.org.pk'
 
 COMPRESS_ENABLED = True
 HTML_MINIFY = True
