@@ -11,7 +11,7 @@ from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailadmin.edit_handlers import (FieldPanel,
                                                 InlinePanel)
 
-from blog.models import BlogPost
+# from blog.models import BlogPost
 
 
 class SlideshowImage(models.Model):
@@ -35,9 +35,9 @@ class SlideshowSlideshowImage(Orderable, SlideshowImage):
 class HomePage(Page):
     body = RichTextField(blank=True)
 
-    @property
-    def posts(self):
-        return BlogPost.objects.order_by('-date')[:3]
+    # @property
+    # def posts(self):
+    #     return BlogPost.objects.order_by('-date')[:3]
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
