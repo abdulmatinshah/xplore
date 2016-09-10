@@ -11,11 +11,11 @@ var jshint = require('gulp-jshint');
 var size = require('gulp-size');
 var imagemin = require('gulp-imagemin');
 
-var o_images = './woyd/static/img/';
+var o_images = './xplore/static/img/';
 
 var paths = {
-    'css': './woyd/static/css/',
-    'js': './woyd/static/js/',
+    'css': './xplore/static/css/',
+    'js': './xplore/static/js/',
     'sass': './sass/',
     'images': './gfx/',
 };

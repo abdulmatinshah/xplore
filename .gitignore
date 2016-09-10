@@ -20,4 +20,5 @@ blog_old/
 include/
 lib/
 scrot.jpg
-woyd.db
+xplore.db
+xplore/settings/dev.py
