@@ -105,7 +105,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mydatabase',
         'USER': 'xplore',
-        'PASSWORD': 'xplore_admin',
+        'PASSWORD': 'xplore',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

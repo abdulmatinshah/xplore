@@ -2,50 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0713d6ef-8aac-45d5-a711-2f74a2c21848" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xplore/settings/dev.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/css/peppermint.required.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/css/screen.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/css/screen.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/css/wagshop.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/fonts/materialdesignicons-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/fonts/materialdesignicons-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/fonts/materialdesignicons-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/fonts/materialdesignicons-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/fonts/materialdesignicons-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/img/arrow-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/img/arrow-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/img/logo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/js/peppermint.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/woyd/static/js/woyd.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/woyd.iml" afterPath="$PROJECT_DIR$/.idea/xplore.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/__init__.py" afterPath="$PROJECT_DIR$/xplore/templatetags/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/xplore/migrations/0001_initial.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/migrations/__init__.py" afterPath="$PROJECT_DIR$/xplore/settings/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/models.py" afterPath="$PROJECT_DIR$/xplore/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/settings/__init__.py" afterPath="$PROJECT_DIR$/xplore/migrations/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/settings/base.py" afterPath="$PROJECT_DIR$/xplore/settings/base.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/settings/production.py" afterPath="$PROJECT_DIR$/xplore/settings/production.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/404.html" afterPath="$PROJECT_DIR$/xplore/templates/404.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/500.html" afterPath="$PROJECT_DIR$/xplore/templates/500.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/base.html" afterPath="$PROJECT_DIR$/xplore/templates/base.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/partials/page_title.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/page_title.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/partials/services.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/services.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/partials/site_content.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/site_content.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/partials/site_footer.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/site_footer.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/partials/site_header.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/site_header.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/partials/sociallinks.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/sociallinks.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/prices/price.html" afterPath="$PROJECT_DIR$/xplore/templates/prices/price.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templates/prices/widget.html" afterPath="$PROJECT_DIR$/xplore/templates/prices/widget.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templatetags/__init__.py" afterPath="$PROJECT_DIR$/xplore/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/templatetags/woyd_tags.py" afterPath="$PROJECT_DIR$/xplore/templatetags/woyd_tags.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/urls.py" afterPath="$PROJECT_DIR$/xplore/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/woyd/wsgi.py" afterPath="$PROJECT_DIR$/xplore/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/settings/base.py" afterPath="$PROJECT_DIR$/xplore/settings/base.py" />
     </list>
     <ignored path="woyd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="189">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -100,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xplore/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
-              <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+            <state relative-caret-position="599">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
                 <element signature="e#305#361#0" expanded="true" />
               </folding>
@@ -130,8 +87,8 @@
         <option value="$PROJECT_DIR$/woyd/templates/partials/site_footer.html" />
         <option value="$PROJECT_DIR$/content_page/models.py" />
         <option value="$PROJECT_DIR$/content_page/templates/content_page/content_page.html" />
-        <option value="$PROJECT_DIR$/xplore/settings/base.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/xplore/settings/base.py" />
       </list>
     </option>
   </component>
@@ -809,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xplore/settings/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
-          <folding>
-            <element signature="e#305#361#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xplore/settings/dev.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -841,9 +788,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="189">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xplore/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#305#361#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
