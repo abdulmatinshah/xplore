@@ -1,21 +1,9 @@
-# WOYD - Just another Wagtail demo project
+# AMS - XploreTechnologies Project
 
-This is a demonstration project for Wagtail CMS.
 
-![WOYD preview](scrot.jpg "WOYD site preview")
+![AMS preview](screenshot.png "XploreTechnologies site preview")
 
-I created a website for a Wedding Planner agency in Wagtail.
-I wrote from the first byte of backend to the last byte of frontend and oprations.
 
-This project was not meant to be used as a starting project for yout site.
-Please consider this project as an example I wrote to study Wagtail.
-
-I am mainly a frontend developer, and all the scss you will find here
-is my from my own, I did not use any framework.
-
-To see how this site looks, go to http://woyd.carlorat.me
-
-I deploy the project using [Fabric](http://www.fabfile.org/), on a [Debian](http://www.debian.org/) vps.
 
 ## Requisites
 
@@ -51,8 +39,8 @@ I deploy the project using [Fabric](http://www.fabfile.org/), on a [Debian](http
 4. Copy and edit example settings file
 
   ```
-  $ cp woyd/settings/dev-example.py woyd/settings/dev.py
-  $ $EDITOR woyd/settings/dev.py
+  $ cp xplre/settings/dev-example.py xplore/settings/dev.py
+  $ $EDITOR xplore/settings/dev.py
   ```
 
   Set the database here to suit your needs. Are you using [PostgreSQL](http://www.postgresql.org), right :) ?

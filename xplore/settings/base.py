@@ -111,7 +111,7 @@ DATABASES = {
     }
 }
 
-
+ALLOWED_HOSTS = ['.xploretechnologies.net']
 
 LANGUAGE_CODE = 'en-us'
 
