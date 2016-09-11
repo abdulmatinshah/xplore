@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0713d6ef-8aac-45d5-a711-2f74a2c21848" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contact_form/templates/contact_form/contact_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contact_form/templates/contact_form/contact_form_landing.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/migrations/0002_auto_20160910_0908.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/templates/blog/blog_index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/templates/blog/blog_post.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/blog_old/views.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/xplore/templatetags/woyd_tags.py" afterPath="$PROJECT_DIR$/xplore/templatetags/xplore_tags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/blog_index_page.html" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_index_page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" afterPath="$PROJECT_DIR$/blog/templates/blog/blog_page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content_page/models.py" afterPath="$PROJECT_DIR$/content_page/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/models.py" afterPath="$PROJECT_DIR$/home/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/templates/home/home_page.html" afterPath="$PROJECT_DIR$/home/templates/home/home_page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/04_components/_site-main.scss" afterPath="$PROJECT_DIR$/sass/04_components/_site-main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/settings/base.py" afterPath="$PROJECT_DIR$/xplore/settings/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/templates/partials/services.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/services.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/templates/partials/site_footer.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/site_footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/templates/partials/site_header.html" afterPath="$PROJECT_DIR$/xplore/templates/partials/site_header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/wsgi.py" afterPath="$PROJECT_DIR$/xplore/wsgi.py" />
-    </list>
+    <list default="true" id="0713d6ef-8aac-45d5-a711-2f74a2c21848" name="Default" comment="" />
     <ignored path="woyd.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -49,14 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xplore/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1620">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="54">
+              <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
               <folding>
                 <element signature="e#305#361#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/contact_form/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,6 +106,7 @@
         <option value="$PROJECT_DIR$/blog/templates/blog/blog_index_page.html" />
         <option value="$PROJECT_DIR$/xplore/wsgi.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/contact_form/migrations/0001_initial.py" />
       </list>
     </option>
   </component>
@@ -229,7 +212,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
+              <option name="myItemId" value="contact_form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,15 +226,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
+              <option name="myItemId" value="contact_form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -503,9 +482,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="136" width="1260" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -542,11 +521,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xplore/static/img/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content_page/migrations/0002_auto_20160910_1145.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -939,11 +913,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xplore/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1620">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        <state relative-caret-position="54">
+          <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
           <folding>
             <element signature="e#305#361#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact_form/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
