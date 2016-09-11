@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0713d6ef-8aac-45d5-a711-2f74a2c21848" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrot.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xplore/settings/base.py" afterPath="$PROJECT_DIR$/xplore/settings/base.py" />
-    </list>
+    <list default="true" id="0713d6ef-8aac-45d5-a711-2f74a2c21848" name="Default" comment="" />
     <ignored path="woyd.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
