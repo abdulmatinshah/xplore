@@ -12,11 +12,9 @@ dist/
 /media/
 whoosh_index/
 src/
-woyd/settings/dev.py
 fabfile.py
 static/
 bin/
-blog_old/
 include/
 lib/
 scrot.jpg

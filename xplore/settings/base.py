@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'content_page',
     'search',
     'blog',
+    'contact_form',
     'xplore',
 
     'django_gulp',

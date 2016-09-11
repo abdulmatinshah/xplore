@@ -2,7 +2,7 @@ from __future__ import absolute_import, unicode_literals
 from django.db import models
 
 from wagtail.wagtailcore.models import Page
-from wagtail.wagtailadmin import blocks
+from wagtail.wagtailcore import blocks
 from wagtail.wagtailimages.blocks import ImageChooserBlock
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailcore.fields import StreamField

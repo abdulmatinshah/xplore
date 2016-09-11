@@ -1,18 +1,13 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags static %}
-
-
 {% block body_class %}template-homepage{% endblock %}
-
-
 
 {% block content %}
 {% include "partials/page_title.html" %}
 
-{% include "partials/site_content.html" %}
-
-
-
+<div class="container">
+    <div class="grid">
+    <div class="s-12">
     {% if category %}
     <h2>{{ category }}</h2>
     {% endif %}
@@ -44,5 +39,8 @@
 
     {% else %}
         <p>There are currently no blog posts</p>
-    {% endif %}        
+    {% endif %}
+        </div><!--s-12-->
+        </div><!--grid-->
+    </div><!--container-->
 {% endblock %}

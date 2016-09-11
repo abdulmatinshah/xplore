@@ -1,6 +1,7 @@
 from __future__ import absolute_import, unicode_literals
 
 from django.db import models
+from blog.models import BlogPage as BlogPost
 
 from modelcluster.fields import ParentalKey
 
@@ -35,9 +36,9 @@ class SlideshowSlideshowImage(Orderable, SlideshowImage):
 class HomePage(Page):
     body = RichTextField(blank=True)
 
-    # @property
-    # def posts(self):
-    #     return BlogPost.objects.order_by('-date')[:3]
+    @property
+    def posts(self):
+        return BlogPost.objects.live().order_by('-date')[:5]
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),

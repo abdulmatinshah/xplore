@@ -1,5 +1,5 @@
 """
-WSGI config for woyd project.
+WSGI config for AMS project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
