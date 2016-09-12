@@ -59,6 +59,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
+
+    'wagtail.contrib.modeladmin',
+    'wagtailmenus',
 ]
 
 MIDDLEWARE_CLASSES = [

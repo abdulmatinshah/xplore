@@ -1,0 +1,34 @@
+{% load menu_tags %}
+{% if menu_items %}
+<nav class="nav-section" role="navigation">
+    {% if show_section_root and section_root %}
+        <a href="{{ section_root.href }}" class="{{ section_root.active_class }} section_root">{{ section_root.text }}</a>
+    {% endif %}
+    <ul>
+        {% for item in menu_items %}
+        <li class="{{ item.active_class }}">
+            <a href="{{ item.href }}">{{ item.text }}</a>
+            {% if item.has_children_in_menu %}
+                 {% sub_menu item %}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</nav>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+    </div>
+</nav>

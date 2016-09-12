@@ -1,4 +1,4 @@
-{% load static xplore_tags %}
+{% load static xplore_tags menu_tags %}
 
 <section class="site-topbar">
 <nav class="site-topbar__sociallinks">
@@ -27,9 +27,16 @@
                     {{ menu_item }}
                 </a>
             {% endfor %}
-
         </nav>
     </div>
 </div>
 </header>
+<div>
+</div>
+{% if self.get_ancestors|length > 1 %}
+{% include "partials/breadcrumb.html" %}
+{% children_menu %}
+{% else %}
+{% include "partials/placeholder.html" %}
 
+{% endif %}
