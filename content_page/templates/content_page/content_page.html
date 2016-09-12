@@ -1,25 +1,35 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags xplore_tags%}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
 
 {% include "partials/page_title.html" %}
-
-{{page.intro}}
-{% for block in page.body %}
-        {% if block.block_type == 'heading' %}
-            <h1>{{ block.value }}</h1>
-        {% else %}
-            <section class="block-{{ block.block_type }}">
-                {% include_block block %}
-            </section>
-        {% endif %}
-{% endfor %}
-
-
+<p class="lead">
+    {{page.intro}}
+</p>
+<p>
+    {% submenu page=self %}
+</p>
+<section class="site-content">
+    <div class="container">
+        <div class="grid">
+            <div class="s-12">
+                {% for block in page.body %}
+                {% if block.block_type == 'heading' %}
+                <h1>{{ block.value }}</h1>
+                {% else %}
+                <section class="block-{{ block.block_type }}">
+                    {% include_block block %}
+                </section>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
 

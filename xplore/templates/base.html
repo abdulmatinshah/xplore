@@ -12,7 +12,11 @@
     <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+    {# External javascript #}
+        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     {% block extra_css %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/screen.css' %}">
 </head>
@@ -21,14 +25,13 @@
     {% wagtailuserbar %}
 
     {% include "partials/site_header.html" %}
+    {% include "partials/breadcrumb.html" %}
 
     <main class="site-main">
 
     {% block content %}{% endblock %}
-
     {% include "partials/site_footer.html" %}
-
-    <script type="text/javascript" src="{% static 'js/woyd.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/xplore.js' %}"></script>
     {% compress js %}
     {% block extra_js %}{% endblock %}
     {% endcompress %}

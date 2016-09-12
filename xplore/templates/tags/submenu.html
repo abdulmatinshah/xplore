@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+
+<ul>
+    <li><a href="{% pageurl fatherpage%}">&uparrow; {{fatherpage}}</a></li>
+    {% for subpage in subpages %}
+        <a href="{% pageurl subpage%}">{{subpage}}</a>
+    {% endfor %}
+
+</ul>

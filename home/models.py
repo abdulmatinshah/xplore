@@ -38,7 +38,7 @@ class HomePage(Page):
 
     @property
     def posts(self):
-        return BlogPost.objects.live().order_by('-date')[:5]
+        return BlogPost.objects.live().order_by('-date')[:4]
 
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),

@@ -1,0 +1,54 @@
+{% load wagtailimages_tags static xplore_tags %}
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static "css/sw_carousel.min.css" %}" />
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/jquery.royalslider.min.js' %}"></script>
+{% endblock %}
+    {% timestamp as id_prefix %}
+
+
+
+      <div class="container-carousel">
+
+          <div id="{{ id_prefix }}-gallery" class="royalSlider rsDefault visibleNearby">
+
+         {% for item in self %}
+
+                {% image item.image height-400 as carouselimagedata %}
+                <a class="rsImg" data-rsw="{{ carouselimagedata.width }}" data-rsh="{{ carouselimagedata.height }}"  href="{{ carouselimagedata.url }}">
+                        {{ item.caption }}
+                </a>
+
+         {% endfor %}
+
+          </div>
+
+      </div>
+
+    <script>
+      // Important note! If you're adding CSS3 transition to slides, fadeInLoadedSlide should be disabled to avoid fade-conflicts.
+      jQuery(document).ready(function($) {
+        var si = $('#{{ id_prefix }}-gallery').royalSlider({
+          addActiveClass: true,
+          arrowsNav: true,
+          controlNavigation: 'none',
+          autoScaleSlider: true,
+          autoScaleSliderWidth: 500,
+          autoScaleSliderHeight: 250,
+          loop: true,
+          fadeinLoadedSlide: false,
+          globalCaption: true,
+          keyboardNavEnabled: true,
+          globalCaptionInside: false,
+          visibleNearby: {
+            enabled: true,
+            centerArea: 0.4,
+            center: true,
+            breakpoint: 650,
+            breakpointCenterArea: 0.64,
+            navigateByCenterClick: true
+          }
+        }).data('royalSlider');
+
+      });
+    </script>

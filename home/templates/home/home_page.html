@@ -43,7 +43,7 @@
 <section class="homepage-latest-posts">
 
     <header>
-        <h2 class="homepage-latest-posts__title big-section-title">Latest blog articles</h2>
+        <h2 class="homepage-latest-posts__title big-section-title">Latest news</h2>
     </header>
 
     <div class="container">
@@ -53,7 +53,7 @@
             <article class="latest-post">
                 <a href="{{ p.url }}">
                     <figure class="latest-post__figure">
-                        {% image p.main_image width-600 %}
+                        {% image p.header_image width-600 %}
                     </figure>
                     <h2 class="latest-post__title">{{ p.title }}</h2>
                     <p class="latest-post__date">{{ p.date }}</p>

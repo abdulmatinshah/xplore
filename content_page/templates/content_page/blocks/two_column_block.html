@@ -1,0 +1,10 @@
+<div class="row" style="background-color: {{ self.background }};">
+
+      <div class="col-md-6 s-6">
+           {% include "content_page/includes/sf_blocks.html" with blocks=self.left_column only %}
+      </div>
+      <div class="col-md-6 s-6">
+           {% include "content_page/includes/sf_blocks.html" with blocks=self.right_column only %}
+     </div>
+
+</div>

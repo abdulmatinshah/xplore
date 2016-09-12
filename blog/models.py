@@ -190,6 +190,7 @@ def limit_author_choices():
 
 
 class BlogPage(Page):
+
     body = RichTextField(verbose_name=_('body'), blank=True)
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
     date = models.DateField(
