@@ -62,6 +62,11 @@ INSTALLED_APPS = [
 
     'wagtail.contrib.modeladmin',
     'wagtailmenus',
+    # django comments xtd
+    'django.contrib.sites',
+    'django_comments',
+    'django_comments_xtd',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -153,3 +158,14 @@ BASE_URL = 'http://mycap.org.pk'
 
 COMPRESS_ENABLED = True
 HTML_MINIFY = True
+
+
+# django cemments xtd
+SITE_ID = 1
+COMMENTS_APP = 'django_comments_xtd'
+COMMENTS_XTD_MAX_THREAD_LEVEL = 2
+EMAIL_HOST = "smtp.mail.com"
+EMAIL_PORT = "587"
+EMAIL_HOST_USER = "abdulmateenshah@gmail.com"
+EMAIL_HOST_PASSWORD = "Plasticsun768"
+DEFAULT_FROM_EMAIL = "Helpdesk <helpdesk@xploretechnologies.net>"

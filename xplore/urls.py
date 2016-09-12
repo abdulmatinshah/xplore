@@ -19,6 +19,8 @@ urlpatterns = [
 
     url(r'^blog/', include('blog.urls', namespace="blog")),
 
+    url(r'^comments/', include('django_comments_xtd.urls')),
+
     url(r'', include(wagtail_urls)),
 ]
 
