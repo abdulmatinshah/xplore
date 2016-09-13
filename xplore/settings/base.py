@@ -109,17 +109,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'xplore.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'xplore',
-        'USER': 'webmaster',
-        'PASSWORD': 'xplore',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
-
 ALLOWED_HOSTS = ['.xploretechnologies.net']
 
 LANGUAGE_CODE = 'en-us'
@@ -152,9 +141,9 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "CAP"
+WAGTAIL_SITE_NAME = "XT"
 
-BASE_URL = 'http://mycap.org.pk'
+BASE_URL = 'http://xploretechnologies.net'
 
 COMPRESS_ENABLED = True
 HTML_MINIFY = True
@@ -166,6 +155,6 @@ COMMENTS_APP = 'django_comments_xtd'
 COMMENTS_XTD_MAX_THREAD_LEVEL = 2
 EMAIL_HOST = "smtp.mail.com"
 EMAIL_PORT = "587"
-EMAIL_HOST_USER = "abdulmateenshah@gmail.com"
-EMAIL_HOST_PASSWORD = "Plasticsun768"
+EMAIL_HOST_USER = "jkjlkjljlkjlk@gmail.com"
+EMAIL_HOST_PASSWORD = "hhkhkhkhk"
 DEFAULT_FROM_EMAIL = "Helpdesk <helpdesk@xploretechnologies.net>"

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n xplore_tags %}
+
+{% block title %}{% trans "Thanks for commenting" %}.{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="grid">
+        <div class="s-12">
+            {% include "partials/page_title.html" %}
+            <h1>{% trans "Thank you for your comment" %}. </h1>
+            {% get_site_root as sr %}
+            <p><a href="{{sr.url}}">Thanks, Go back</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

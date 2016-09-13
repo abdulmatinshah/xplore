@@ -1,11 +1,13 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n comments%}
+
 {% block title %}{% trans "Preview your comment" %}{% endblock %}
 {% block content %}
+{% include "partials/page_title.html" %}
+
 <div class="container">
     <div class="grid">
         <div class="s-12">
-            {% load comments %}
   <form action="{% comment_form_target %}" method="post">{% csrf_token %}
     {% if next %}
       <div><input type="hidden" name="next" value="{{ next }}"/></div>{% endif %}
@@ -15,7 +17,7 @@
       <h1>{% trans "Preview your comment" %}</h1>
       <blockquote>{{ comment|linebreaks }}</blockquote>
       <p>
-        {% trans "and" %} <input type="submit" name="submit" class="btn btn-secondary" value="{% trans "Post your comment" %}"
+        {% trans "and" %} <input type="submit" name="submit" class="btn btn-secondary btn--small" value="{% trans "Post your comment" %}"
                                  id="submit"/> {% trans "or make changes" %}:
       </p>
     {% endif %}

@@ -20,4 +20,4 @@ include/
 lib/
 scrot.jpg
 xplore.db
-xplore/settings/dev.py
+xplore/settings/local.py
