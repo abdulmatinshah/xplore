@@ -17,3 +17,11 @@ DATABASES = {
         'NAME': 'xplore.db',
     }
 }
+
+# BASE_URL required for notification emails
+BASE_URL = 'http://localhost:8000'
+
+try:
+    from .local import *
+except ImportError:
+    pass

@@ -143,13 +143,12 @@ MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = "XT"
 
-BASE_URL = 'http://xploretechnologies.net'
 
 COMPRESS_ENABLED = True
 HTML_MINIFY = True
 
 
-# django cemments xtd
+# django comments xtd
 SITE_ID = 1
 COMMENTS_APP = 'django_comments_xtd'
 COMMENTS_XTD_MAX_THREAD_LEVEL = 2

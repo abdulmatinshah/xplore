@@ -10,6 +10,14 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailcore.fields import StreamField
 
 
+class ImageCarouselBlock(blocks.StructBlock):
+    image = ImageChooserBlock()
+    caption = blocks.TextBlock(required=False)
+
+    class Meta:
+        icon = 'image'
+
+
 class GoogleMapBlock(blocks.StructBlock):
     map_long = blocks.CharBlock(required=True, max_length=255)
     map_lat = blocks.CharBlock(required=True, max_length=255)
@@ -29,11 +37,13 @@ COLOUR_CHOICES = [
 
 
 class TwoColumnBlock(blocks.StructBlock):
-    background = blocks.ChoiceBlock(choices=COLOUR_CHOICES, default="white")
+    background = blocks.ChoiceBlock(choices=COLOUR_CHOICES, required=False)
     left_column = blocks.StreamBlock([
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('image_carousel', blocks.ListBlock(ImageCarouselBlock(), template='content_page/blocks/carousel_small.html')),
+
         ('embedded_video', EmbedBlock()),
         ('google_map', GoogleMapBlock()),
     ], icon='arrow-left', label='Left column content')
@@ -42,6 +52,7 @@ class TwoColumnBlock(blocks.StructBlock):
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('image_carousel', blocks.ListBlock(ImageCarouselBlock(), template='content_page/blocks/carousel_small.html')),
         ('embedded_video', EmbedBlock()),
         ('google_map', GoogleMapBlock()),
     ], icon='arrow-right', label='Right column content')
@@ -58,6 +69,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('image_carousel', blocks.ListBlock(ImageCarouselBlock(), template='content_page/blocks/carousel_small.html')),
         ('embedded_video', EmbedBlock()),
         ('google_map', GoogleMapBlock()),
     ], icon='arrow-left', label='Left column content')
@@ -66,6 +78,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('image_carousel', blocks.ListBlock(ImageCarouselBlock(), template='content_page/blocks/carousel_small.html')),
         ('embedded_video', EmbedBlock()),
         ('google_map', GoogleMapBlock()),
     ], icon='arrow-up', label='Middle column content')
@@ -74,6 +87,7 @@ class ThreeColumnBlock(blocks.StructBlock):
         ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('image_carousel', blocks.ListBlock(ImageCarouselBlock(), template='content_page/blocks/carousel_small.html')),
         ('embedded_video', EmbedBlock()),
         ('google_map', GoogleMapBlock()),
     ], icon='arrow-right', label='Right column content')
@@ -84,21 +98,12 @@ class ThreeColumnBlock(blocks.StructBlock):
         label = 'Three Columns'
 
 
-class ImageCarouselBlock(blocks.StructBlock):
-    image = ImageChooserBlock()
-    caption = blocks.TextBlock(required=False)
-
-    class Meta:
-        icon = 'image'
-
-
 class ContentPage(Page):
     intro = models.CharField(max_length=255, null=True, blank=True)
     body = StreamField([
         ('heading', blocks.CharBlock(classname="full title", icon="title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock(icon="image")),
-
 
         ('two_columns', TwoColumnBlock()),
         ('three_columns', ThreeColumnBlock()),

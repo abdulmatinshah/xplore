@@ -18,6 +18,5 @@ static/
 bin/
 include/
 lib/
-scrot.jpg
 xplore.db
-xplore/settings/local.py
+xplore/settings/local_example.py
